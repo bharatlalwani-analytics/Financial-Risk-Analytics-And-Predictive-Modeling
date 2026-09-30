@@ -23,4 +23,4 @@ This repository features an end-to-end data pipeline and machine learning engine
 ## 👥 Author & Attribution
 * **Developed By:** Bharat Lalwani
 * **Role:** Data Engineer & Analytics Consultant
-* **Connect:** [GitHub Profile](https://github.com/bharatlalwani-analytics) | [LinkedIn]([https://linkedin.com](https://www.linkedin.com/in/bharatlalwani-analytics)
+* **Connect:** [GitHub Profile](https://github.com/bharatlalwani-analytics) | [LinkedIn](https://www.linkedin.com/in/bharatlalwani-analytics)
