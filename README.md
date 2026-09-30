@@ -1,4 +1,4 @@
-# 🏦 Loan Default Risk Prediction & Analysis
+# 🏦 Financial Risk Analytics & Predictive Modeling
 
 ## 📌 Overview
 This project focuses on predicting loan default risk and understanding the key factors that influence it using Machine Learning and Power BI.
