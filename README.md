@@ -1,129 +1,21 @@
-# 🏦 Financial Risk Analytics & Predictive Modeling
+# FinTech Credit Default Risk Classifier & Analytics Pipeline
 
-## 📌 Overview
-This project focuses on predicting loan default risk and understanding the key factors that influence it using Machine Learning and Power BI.
+## 💼 The Business Problem
+Lending institutions and digital FinTech platforms suffer substantial financial losses due to non-performing loans (NPLs) and unexpected borrower defaults. Manually evaluating thousands of loan applications introduces human bias, slows down approval lifecycles, and increases bad debt exposure. The objective of this project is to build an automated predictive risk engine that accurately classifies high-risk applicants at the point of ingestion, enabling credit risk teams to optimize lending margins.
 
-The objective is to help financial institutions identify high-risk customers and make better lending decisions.
+## 🛠️ The Technical Solution
+This repository features an end-to-end data pipeline and machine learning engine developed in Python to evaluate borrower risk profiles. 
+* **Data Engineering & Imputation:** Utilized Pandas and NumPy for schema cleaning, handling massive missing financial entries, and neutralizing data imbalance issues.
+* **Exploratory Data Analysis (EDA):** Performed deep bivariate and multivariate analysis to identify critical default drivers (e.g., debt-to-income ratios, employment history, and utilization rates).
+* **Predictive Modeling:** Engineered and optimized binary classification models to score incoming applicants based on default probability, optimizing for Recall to minimize false negatives (undetected high-risk borrowers).
 
----
+## 🚀 Commercial Business Impact
+* **Reduces Bad Debt Exposure:** Proactively flags potential defaulters, allowing credit managers to mitigate risk or adjust interest rates before loan disbursement.
+* **Accelerates Processing Lifecycles:** Automates the initial risk-tiering process, moving low-risk applicants straight to approval and saving operations teams hundreds of manual evaluation hours.
+* **Data-Backed Capital Optimization:** Empowers financial founders to safely scale their loan portfolios by maintaining a predictable, data-backed default margin.
 
-## 💼 Business Problem
-Loan defaults can lead to significant financial losses. The challenge is to accurately identify risky customers in a **highly imbalanced dataset (~8% defaults)**.
-
-Traditional accuracy-based models fail in such cases, making it important to focus on metrics like recall and ROC-AUC.
-
----
-
-## 📂 Dataset
-The dataset consists of **300K+ customer records** across two files:
-
-- **Application Data** → Customer demographics & financial details  
-- **Previous Loan Data** → Historical loan behavior  
-
-### 🎯 Target Variable
-- `TARGET = 1` → Default  
-- `TARGET = 0` → No Default  
-
----
-
-## 🧹 Data Preparation
-
-- Selected relevant features from large datasets  
-- Handled missing values:
-  - Numerical → Median imputation  
-  - Categorical → "Unknown"  
-- Removed invalid categories (e.g., XNA)  
-- Fixed anomalies (e.g., DAYS_EMPLOYED issue)  
-- Treated outliers (income capping)
-
----
-
-## ⚙️ Feature Engineering
-
-Created meaningful features to improve model performance:
-
-- **ANNUITY_BURDEN** = Annuity / Income  
-- **INCOME_TO_CREDIT_RATIO** = Income / Credit  
-- **Employment duration (years)**  
-- **Previous loan aggregation**:
-  - Average, max, total credit  
-  - Number of previous applications  
-
----
-
-## 🤖 Modeling
-
-### 1. Logistic Regression (Final Model)
-- Used `class_weight='balanced'` to handle imbalance  
-- Applied feature scaling  
-- Performed threshold tuning  
-
-### 2. Random Forest
-- Tuned parameters (max_depth, min_samples_leaf)  
-- Compared performance with Logistic Regression  
-
----
-
-## 📊 Model Performance
-
-| Metric | Value |
-|------|------|
-| Recall (Default Class) | ~0.68 |
-| Precision | ~0.16 |
-| ROC-AUC | ~0.74 |
-
-### 🎯 Key Focus
-- Maximizing **recall** to detect defaulters  
-- Maintaining reasonable precision  
-
----
-
-## 📈 Key Insights
-
-- External credit scores are the strongest predictors of default  
-- Higher financial burden significantly increases risk  
-- Employment stability reduces default probability  
-- Default risk declines after 5–10 years of employment  
-- Younger customers show higher default tendencies  
-- Default risk is driven by multiple interacting factors  
-
----
-
-## 📊 Dashboard
-
-A Power BI dashboard was built to visualize risk patterns and business insights.
-
-<img width="1280" height="721" alt="image" src="https://github.com/user-attachments/assets/9587d231-8ef9-407f-9a13-f59b35824024" />
-
-
----
-
-## 💼 Business Recommendations
-
-- Focus on customers with high financial burden  
-- Monitor customers with unstable employment  
-- Use multi-factor risk assessment instead of relying on a single variable  
-- Adjust lending strategy based on risk segments  
-
----
-
-## 🚀 Future Improvements
-
-- Implement XGBoost for performance improvement  
-- Apply SMOTE for advanced imbalance handling  
-- Deploy model using Flask/Streamlit  
-- Build real-time risk scoring system  
-
----
-
-## 🛠️ Tech Stack
-- Python (Pandas, NumPy, Matplotlib, Seaborn)
-- Scikit-learn
-- Power BI
-- Jupyter Notebook
-
----
-
-## 👤 Author
-**Bharat Lalwani**
-[LinkedIn](https://www.linkedin.com/in/bharatlalwani-analytics) • [GitHub](https://github.com/bharatlalwani-analytics)
+## 🧰 Tech Stack & Libraries
+* **Language:** Python
+* **Data Wrangling:** Pandas, NumPy
+* **Visualization & Analytics:** Matplotlib, Seaborn
+* **Environment:** Jupyter Notebook / Production-ready Python scripts
