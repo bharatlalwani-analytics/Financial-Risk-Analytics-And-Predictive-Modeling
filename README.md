@@ -19,3 +19,8 @@ This repository features an end-to-end data pipeline and machine learning engine
 * **Data Wrangling:** Pandas, NumPy
 * **Visualization & Analytics:** Matplotlib, Seaborn
 * **Environment:** Jupyter Notebook / Production-ready Python scripts
+
+## 👥 Author & Attribution
+* **Developed By:** Bharat Lalwani
+* **Role:** Data Engineer & Analytics Consultant
+* **Connect:** [GitHub Profile](https://github.com/bharatlalwani-analytics) | [LinkedIn]([https://linkedin.com](https://www.linkedin.com/in/bharatlalwani-analytics/))
